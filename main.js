@@ -13,3 +13,14 @@ function addText(str) {
     li.innerText = str;
 }
 
+function addImg(imgEl, str) {
+    const img = document.querySelector(imgEl)
+    img.src = str;
+}
+
+function setClass(el1, el2) {
+    const firstEl = document.querySelector(el1);
+    const secondEl = document.querySelector(el2);
+    secondEl === firstEl;
+}
+
