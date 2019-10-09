@@ -9,12 +9,14 @@ function appendToDiv(element) {
 }
 
 function addText(str) {
+    const newLi = document.createElement('li')
     const li = document.querySelector('li');
-    li.innerText = str;
+    newLi.innerText = str;
+    li.appendChild(newLi);
 }
 
 function addImg(imgEl, str) {
-    const img = document.querySelector(imgEl)
+    const img = document.querySelector(imgEl);
     img.src = str;
 }
 
@@ -25,16 +27,24 @@ function sameClass(el1, el2) {
 }
 
 function makeElement(tag, id) {
-    const newEl = document.createElement(tag, id);
+    const newEl = document.createElement(tag)
+    newEl.id = id;
     return newEl;
 }
 
 function blah(color, id) {
-    const id = document.querySelector(id);
-    id.style.color = color;
+    const id1 = document.querySelector(id);
+    id1.style.color = color;
 }
 
-addText('test1')
-addText('test2')
-addText('test3')
+addText('i love dom');
+addText('i love css');
+addText('i love html');
+
+appendToDiv(makeElement('img', '#img1'))
+appendToDiv(makeElement('img', '#img2'))
+
+
+
+blah('red', '#heading');
 
