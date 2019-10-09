@@ -49,7 +49,8 @@ appendToDiv(makeElement('img', 'img2'));
 addImg('#img2', 'https://media.giphy.com/media/xT9IgFlWsUMDFzVIu4/giphy.gif');
 
 // Task 3
-sameClass('ol', 'ol:nth-child(2)')
+sameClass('.numbered-item', '#thing-2')
+sameClass('.numbered-item', '#thing-c')
 
 // Task 4
 blah('red', '#heading');
