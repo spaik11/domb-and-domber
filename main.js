@@ -18,9 +18,23 @@ function addImg(imgEl, str) {
     img.src = str;
 }
 
-function setClass(el1, el2) {
+function sameClass(el1, el2) {
     const firstEl = document.querySelector(el1);
     const secondEl = document.querySelector(el2);
     secondEl === firstEl;
 }
+
+function makeElement(tag, id) {
+    const newEl = document.createElement(tag, id);
+    return newEl;
+}
+
+function blah(color, id) {
+    const id = document.querySelector(id);
+    id.style.color = color;
+}
+
+addText('test1')
+addText('test2')
+addText('test3')
 
