@@ -17,13 +17,13 @@ function addText(str) {
 
 function addImg(imgEl, str) {
     const img = document.querySelector(imgEl);
-    img.src = str;
+    img.src = `${str}`;
 }
 
 function sameClass(el1, el2) {
     const firstEl = document.querySelector(el1);
     const secondEl = document.querySelector(el2);
-    secondEl === firstEl;
+    secondEl.className = firstEl.className;
 }
 
 function makeElement(tag, id) {
@@ -37,14 +37,20 @@ function blah(color, id) {
     id1.style.color = color;
 }
 
+// Task 1
 addText('i love dom');
 addText('i love css');
 addText('i love html');
 
-appendToDiv(makeElement('img', '#img1'))
-appendToDiv(makeElement('img', '#img2'))
+// Task 2
+appendToDiv(makeElement('img', 'img1'));
+addImg('#img1', 'https://media.giphy.com/media/kfFOaEJ9GDmbYebTSu/giphy.gif');
+appendToDiv(makeElement('img', 'img2'));
+addImg('#img2', 'https://media.giphy.com/media/xT9IgFlWsUMDFzVIu4/giphy.gif');
 
+// Task 3
+sameClass('ol', 'ol:nth-child(2)')
 
-
+// Task 4
 blah('red', '#heading');
 
